@@ -845,6 +845,10 @@ a.author-website:before { content: "\f319"; }
 	font-size: 36px;
 }
 
+.blog .entry-title {
+  padding: 0 40px 10px;
+}
+
 .featured-title .entry-title,
 .featured-title .archive-title {
 	font-size: 36px;
@@ -2127,6 +2131,10 @@ span.bigger {
 	padding-top: 40px;
 }
 
+.blog .entry-content {
+  padding: 0 40px;
+}
+
 .single .post {
 	border-top: 1px solid #eee;
 	padding-top: 20px;
@@ -2144,6 +2152,11 @@ span.bigger {
 
 .content .entry {
 	background-color: #fff;
+}
+
+.blog .content .entry {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
 }
 
 .entry-content ol,
@@ -2452,7 +2465,8 @@ p.entry-meta {
 }
 
 .entry-comments {
-	padding: 40px;
+	border-top: 1px solid #eee;
+  padding-top: 20px;
 }
 
 .comment-header {
