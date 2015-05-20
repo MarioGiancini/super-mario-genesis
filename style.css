@@ -832,7 +832,7 @@ a.author-website:before { content: "\f319"; }
 .featured-title {
 	background-attachment: fixed;
 	background-blend-mode: multiply;
-	background-position: bottom center;
+	background-position: 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin-top: -160px;
