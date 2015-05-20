@@ -2919,6 +2919,10 @@ li.comment {
 		max-width: 270px;
 	}
 
+	.home-widgets .featuredpage .entry .alignleft, .home-widgets .featuredpage .entry .alignnone, .home-widgets .featuredpage .entry .alignright {
+  	margin-bottom: 0;
+	}
+
 	.pricing-table .one-third,
 	.pricing-table .one-third:nth-child(3n+1),
 	.pricing-table .one-third:nth-child(3n+3) {
