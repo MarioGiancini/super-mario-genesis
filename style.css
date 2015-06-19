@@ -43,6 +43,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	- Scroll Triggered Boxes
 	- Jetpack
 	- Responsive Menu
+	- Ninja Forms
 - Site Header
 	- Title Area
 	- Widget Area
@@ -61,6 +62,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Sidebars
 - Footer Widgets
 - Site Footer
+- Utilities
 - Media Queries
 	- Retina Display
 	- Max-width: 1200px
@@ -830,7 +832,6 @@ a.author-website:before { content: "\f319"; }
 --------------------------------------------- */
 
 .featured-title {
-	background-attachment: fixed;
 	background-blend-mode: multiply;
 	background-position: 50%;
 	background-repeat: no-repeat;
@@ -859,7 +860,7 @@ a.author-website:before { content: "\f319"; }
 }
 
 .featured-title .entry-title {
-	margin: 310px 0 0;
+	margin: 350px 0 0;
 }
 
 .featured-title .archive-title {
@@ -1253,6 +1254,7 @@ span.bigger {
 }
 
 .home main .entry-content {
+	overflow: hidden;
 	padding: 80px 0;
 }
 
@@ -1803,6 +1805,22 @@ span.bigger {
 	text-transform: uppercase;
 }
 
+/* ## Ninja Forms
+--------------------------------------------- */
+
+#ui-datepicker-div {
+	border-radius: 0;
+  padding: 20px;
+}
+
+.ui-datepicker-month {
+  display: block;
+}
+
+select.ninja-forms-field {
+  min-width: 50%;
+}
+
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
 
@@ -2123,6 +2141,10 @@ span.bigger {
 
 .single .entry {
 	margin-bottom: 40px;
+}
+
+.primary-below-content .entry {
+	margin-bottom: 0;
 }
 
 .content .page {
@@ -2672,6 +2694,28 @@ li.comment {
 	padding: 80px 0;
 }
 
+.info-box {
+	margin-bottom: 20px;
+}
+
+.info-box-left {
+  margin-left: 5em;
+	text-align: left;
+}
+
+.info-box-right {
+  margin-right: 5em;
+	text-align: right;
+}
+
+.floatleft {
+	float: left;
+}
+
+.floatright {
+	float: right;
+}
+
 .text-center {
 	text-align: center;
 }
@@ -2927,6 +2971,15 @@ li.comment {
 	.pricing-table .one-third:nth-child(3n+1),
 	.pricing-table .one-third:nth-child(3n+3) {
 		margin: 0;
+	}
+
+	.author-wrap p {
+	  padding: 10px;
+	}
+
+	.author-networks li > a {
+	  font-size: 0;
+	  height: 36px;
 	}
 
 }
