@@ -1758,7 +1758,7 @@ span.bigger {
 
 #click-menu.click-menu-active .threeLines .line:first-child {
 	opacity: 0;
-	webkit-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
 	-o-transform: rotate(45deg);
@@ -1766,7 +1766,7 @@ span.bigger {
 }
 #click-menu.click-menu-active .threeLines .line:nth-child(2) {
 	margin-bottom: -5px !important;
-	webkit-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
 	-o-transform: rotate(45deg);
@@ -1775,7 +1775,7 @@ span.bigger {
 
 #click-menu.click-menu-active .threeLines .line:nth-child(3) {
 	margin-bottom: 0 !important;
-	webkit-transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
 	-moz-transform: rotate(135deg);
 	-ms-transform: rotate(135deg);
 	-o-transform: rotate(135deg);
