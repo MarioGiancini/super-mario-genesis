@@ -383,7 +383,7 @@ function get_featured_img_url($id) {
 	return $thumb_url;
 }
 function custom_pagination_links() {
-	if( !is_single() )
+	if( !is_singular( 'post' ) )
     return;
 
 	/* Get IDs for images & titles since wordpress doesn't spit this out in an easy way */
