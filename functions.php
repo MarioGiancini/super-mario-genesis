@@ -233,7 +233,7 @@ remove_action( 'genesis_after_entry', 'genesis_do_author_box_single', 8);
 
 add_action('genesis_after_entry', 'theme_author_box', 8);
 function theme_author_box() {
-	if ( is_single() ) {
+	if ( is_singular( 'post' ) ) {
 		theme_author_box_layout();
 	}
 }
@@ -339,14 +339,18 @@ function mario_filter_post_info( $post_info ) {
 /**
  * Custom post meta in entry footer - remove text
  */
-add_filter( 'genesis_post_meta', 'mario_filter_post_meta' );
+add_filter( 'genesis_post_meta', 'mario_filter_post_meta', 25 );
 function mario_filter_post_meta( $post_meta ) {
 
-	if( is_singular() ) {
-		$post_meta = '[post_categories before=""] [post_tags before=""]';
+	if( is_singular('post') ) {
+		$post_meta = do_shortcode('[post_categories before=""] [post_tags before=""]');
+    return $post_meta;
+	}
+	elseif( is_singular('download') ) {
+		$post_meta = do_shortcode('[post_terms taxonomy="download_category" before=""] [post_terms taxonomy="download_tag" before=""]');
     return $post_meta;
 	} else {
-		$post_meta = ''; // removed tags: [post_tags before=""]
+		$post_meta = do_shortcode('[post_terms taxonomy="download_category" before=""] [post_terms taxonomy="download_tag" before=""]'); // removed tags: [post_tags before=""]
     return $post_meta;
 	}
 }
@@ -417,7 +421,7 @@ function sp_footer_creds_text() {
 }
 
 /**
- * Add custom sharing classes and icons
+ * Add custom sharing text and custom download spec text
  **/
 add_action('wp_footer', 'add_custom_sharing_text');
 function add_custom_sharing_text() { ?>
@@ -436,6 +440,24 @@ function add_custom_sharing_text() { ?>
 
 	</script>
 	<?php
+
+	if( is_singular('download') ) {
+
+		?>
+
+		<script>
+
+			jQuery(document).ready(function() {
+
+				jQuery( "#isa-edd-specs tr:nth-child(4) td:first-child" ).text("Type:");
+
+			});
+
+		</script>
+
+		<?php
+	}
+
 }
 
 /**

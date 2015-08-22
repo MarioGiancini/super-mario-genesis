@@ -44,6 +44,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	- Jetpack
 	- Responsive Menu
 	- Ninja Forms
+	- Easy Digital Downloads
 - Site Header
 	- Title Area
 	- Widget Area
@@ -464,9 +465,30 @@ input:hover[type="submit"],
 	display: inline-block;
 }
 
+.dark-section button,
+.dark-section input[type="button"],
+.dark-section input[type="reset"],
+.dark-section input[type="submit"],
+.dark-section .button {
+	background-color: #e74c3c;
+}
+
+.dark-section button:hover,
+.dark-section input:hover[type="button"],
+.dark-section input:hover[type="reset"],
+.dark-section input:hover[type="submit"],
+.dark-section .button:hover {
+	background-color: #fff;
+	color: #333;
+}
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button {
 	display: none;
+}
+
+legend {
+	font-weight: 500;
 }
 
 /* ## Tables
@@ -704,6 +726,10 @@ th {
 	padding: 40px;
 }
 
+.archive-description {
+	text-align: center;
+}
+
 .author-box-title {
 	font-size: 16px;
 	margin-bottom: 4px;
@@ -841,12 +867,20 @@ a.author-website:before { content: "\f319"; }
 	position: relative;
 }
 
-.archive-title,
 .entry-title {
 	font-size: 36px;
 }
 
-.blog .entry-title {
+.archive-title {
+	color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+	margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.blog .entry-title,
+.archive .entry-title {
   padding: 0 40px 10px;
 }
 
@@ -884,6 +918,8 @@ a.author-website:before { content: "\f319"; }
 .sidebar .widget-title {
 	padding-top: 20px;
   border-top: 1px solid #eee;
+	text-align: center;
+  text-transform: uppercase;
 }
 
 .footer-widgets .widget-title {
@@ -1064,6 +1100,7 @@ img.alignright,
 .dark-section,
 .color-section,
 .color-section a,
+.dark-section .widget-title,
 .color-section .widget-title,
 .image-section,
 .image-section a {
@@ -1821,6 +1858,119 @@ select.ninja-forms-field {
   min-width: 50%;
 }
 
+/* ## Easy Digital Downloads
+--------------------------------------------- */
+
+.edd_cp_price {
+    min-width: 25%;
+}
+
+.widget_edd_product_details .edd_cp_price {
+    min-width: 100px;
+}
+
+.post-type-archive-download .entry-meta {
+    padding: 0 40px 20px;
+}
+
+.single-download .sharedaddy {
+    margin: 40px 0 0;
+}
+
+.home .widget_edd_product_details {
+	text-align: center;
+}
+
+.widget_edd_product_details h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.dark-section .widget_edd_product_details h3,
+.color-section .widget_edd_product_details h3 {
+    color: #fff;
+}
+
+#edd_checkout_cart td img {
+    float: left;
+    margin: 6px 8px 0 0;
+    padding: 0;
+}
+
+.edd_cart_footer_row th {
+    padding: 10px 0;
+}
+
+.widget_edd_cart_widget .widget-title {
+	position: relative;
+}
+
+.widget_edd_cart_widget .widget-title:before {
+	color: #e74c3c;
+	content: "\f07a";
+	left: 0;
+	font-family: FontAwesome;
+	position: absolute;
+	top: 20px;
+}
+
+.edd-meta {
+	border-bottom: 1px solid #eee;
+	color: #999999;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.edd-cp-container:after {
+  display: inline-block;
+  content: "Name Your Price";
+  margin-left: 4px;
+}
+
+.site-inner .widget_edd_software_specs_widget #isa-edd-specs {
+  background: #fff;
+	margin: 0;
+}
+
+.site-inner #isa-edd-specs {
+  border: 1px #eee solid;
+}
+
+#isa-edd-specs tbody {
+    border-bottom: 1px solid #eee;
+}
+
+.site-inner #isa-edd-specs caption {
+  background: #fff;
+	border-top: 1px solid #eee;
+	font-size: 18px;
+	font-weight: 400;
+  text-transform: uppercase;
+}
+
+.site-inner #isa-edd-specs td {
+  border: none;
+}
+
+.site-inner #isa-edd-specs td:hover {
+  background-color: #fff;
+}
+
+#isa-edd-specs td:first-child {
+	font-weight: 500;
+  text-align: right;
+}
+
+.site-inner #isa-edd-specs td {
+	padding: 10px 5px 10px;
+	position: relative;
+}
+
+.site-inner .widget_edd_software_specs_widget #isa-edd-specs td:first-child {
+    width: 50%;
+}
+
+
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
 
@@ -2037,8 +2187,7 @@ select.ninja-forms-field {
 }
 
 .site-header .genesis-nav-menu li a:hover,
-.site-header .genesis-nav-menu .current-menu-item > a,
-.site-header .genesis-nav-menu .current_page_parent > a {
+.site-header .genesis-nav-menu .current-menu-item > a {
 	background-color: rgba(0,0,0,0.1);
 	color: #fff;
 }
@@ -2140,7 +2289,7 @@ select.ninja-forms-field {
 }
 
 .single .entry {
-	margin-bottom: 40px;
+	margin-bottom: 80px;
 }
 
 .primary-below-content .entry {
@@ -2153,17 +2302,23 @@ select.ninja-forms-field {
 	padding-top: 40px;
 }
 
-.blog .entry-content {
+.blog .entry-content,
+.archive .entry-content {
   padding: 0 40px;
 }
 
-.single .post {
+.single .post,
+.single .type-download {
 	border-top: 1px solid #eee;
 	padding-top: 20px;
 }
 
 .single .post .entry-content {
   padding-top: 40px;
+}
+
+.single .type-download .entry-content {
+	border-bottom: 1px solid #eee;
 }
 
 .single .comment-respond {
@@ -2176,7 +2331,8 @@ select.ninja-forms-field {
 	background-color: #fff;
 }
 
-.blog .content .entry {
+.blog .content .entry,
+.archive .content .entry {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
 }
@@ -2191,7 +2347,7 @@ select.ninja-forms-field {
 	list-style-type: decimal;
 }
 
-.entry-content ul.disc > li {
+.entry-content li {
 	list-style-type: disc;
 }
 
@@ -2247,11 +2403,18 @@ p.entry-meta {
 .entry-footer .entry-meta {
 	border-top: 2px solid #eee;
 }
-.single .entry-footer .entry-meta {
+.single .entry-meta {
 	padding: 40px 0;
 }
 
+.single.single-download .entry-meta {
+		border-top: 2px solid #eee;
+    border-bottom: 1px solid #eee;
+		margin-top: 40px;
+}
+
 .entry-tags,
+.entry-terms,
 .entry-footer .entry-categories {
 	display: block;
 }
@@ -2286,7 +2449,10 @@ p.entry-meta {
 .entry-comments-link:before,
 .entry-categories:before,
 .entry-tags:before,
-.post-shares:before {
+.post-shares:before,
+.entry-terms:before,
+.edd-meta .tags:before,
+.edd-meta .categories:before {
 	display: inline-block;
 	-webkit-font-smoothing: antialiased;
 	font: normal 20px/1 'dashicons';
@@ -2307,11 +2473,15 @@ p.entry-meta {
 	content: "\f101"; /* dashicons-admin-comments */
 }
 
-.entry-categories:before {
+.entry-categories:before,
+.edd-meta .categories:before,
+.entry-terms:first-child:before {
 	content: "\f318"; /* dashicons-category */
 }
 
-.entry-tags:before {
+.entry-tags:before,
+.edd-meta .tags:before,
+.entry-terms:nth-child(2):before {
 	content: "\f323"; /* dashicons-tag */
 }
 
@@ -2565,6 +2735,10 @@ li.comment {
 .sidebar .widget {
 	background-color: #fff;
 	margin-bottom: 40px;
+}
+
+.content-sidebar .sidebar {
+    border-bottom: 1px solid #eee;
 }
 
 
@@ -2835,7 +3009,7 @@ li.comment {
 	}
 
 	.site-header {
-		min-height: 100px;
+		height: 100px;
 	}
 
 	.bumper {
@@ -2946,7 +3120,12 @@ li.comment {
 	.two-sixths,
 	.two-thirds {
 		margin: 0;
+		margin-bottom: 40px;
 		width: 100%;
+	}
+
+	.site-header {
+		height: 100px;
 	}
 
 	.home-widgets .featuredpost .entry {
@@ -2980,6 +3159,14 @@ li.comment {
 	.author-networks li > a {
 	  font-size: 0;
 	  height: 36px;
+	}
+
+	.single .entry {
+    margin-bottom: 20px;
+	}
+
+	.sidebar {
+    padding-top: 20px;
 	}
 
 }
