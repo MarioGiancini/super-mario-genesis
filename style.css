@@ -2737,6 +2737,11 @@ li.comment {
 	margin-bottom: 40px;
 }
 
+.sidebar .widget_text {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
 .content-sidebar .sidebar {
     border-bottom: 1px solid #eee;
 }
