@@ -35,6 +35,10 @@ add_theme_support(
 	)
 );
 
+//* Reposition the secondary navigation menu
+remove_action( 'genesis_after_header', 'genesis_do_subnav' );
+add_action( 'genesis_before_content_sidebar_wrap', 'genesis_do_subnav' );
+
 //* Add support for post formats
 add_theme_support( 'post-formats', array(
 	'audio',
