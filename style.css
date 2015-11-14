@@ -1865,8 +1865,9 @@ span.bigger {
   display: block;
 }
 
-select.ninja-forms-field {
-  min-width: 50%;
+.ninja-forms-form-wrap .field-wrap select {
+  width: 100%;
+  height: 56px;
 }
 
 /* ## Easy Digital Downloads
