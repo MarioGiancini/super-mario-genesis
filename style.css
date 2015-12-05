@@ -391,6 +391,10 @@ textarea {
 	width: 100%;
 }
 
+select {
+	height: 56px;
+}
+
 input:focus,
 textarea:focus {
 	border: 1px solid #e74c3c;
