@@ -5,7 +5,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'Super Mario Genesis' );
 define( 'CHILD_THEME_URL', 'http://www.mariogiancini.com/' );
-define( 'CHILD_THEME_VERSION', '1.0.0' );
+define( 'CHILD_THEME_VERSION', '1.0.1' );
 
 //* Include Assets
 include_once( get_stylesheet_directory()  . '/includes/theme-helpers.php' );
@@ -223,10 +223,10 @@ function mario_enqueue_styles() {
 	wp_enqueue_style( 'google-font-source-sans-pro', '//fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,700,300italic,400italic,700italic', array(), CHILD_THEME_VERSION );
 
 	//* Font Awesome
-	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), CHILD_THEME_VERSION );
 
 	//* Dashicons
-	wp_enqueue_style( 'mario-dashicons-style', get_stylesheet_directory_uri(), array('dashicons'), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'dashicons' );
 }
 
 /**
